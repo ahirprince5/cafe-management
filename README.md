@@ -82,42 +82,6 @@ For artisan: Run `php artisan serve` and visit http://localhost:8000
 | Admin | admin@cafearoma.com | password123 |
 | Customer | user@cafearoma.com | password123 |
 
-## Project Structure
-
-```
-cafe-management/
-├── app/
-│   ├── Http/
-│   │   ├── Controllers/
-│   │   │   ├── AdminController.php    # Admin panel functions
-│   │   │   ├── AuthController.php     # Login/Register
-│   │   │   ├── HomeController.php     # Homepage
-│   │   │   ├── MenuController.php     # Menu display
-│   │   │   ├── RatingController.php   # Ratings
-│   │   │   └── ReservationController.php  # Reservations
-│   │   └── Middleware/
-│   │       └── AdminMiddleware.php    # Admin access check
-│   └── Models/
-│       ├── User.php
-│       ├── Category.php
-│       ├── MenuItem.php
-│       ├── CafeTable.php
-│       ├── Reservation.php
-│       └── Rating.php
-├── database/
-│   ├── migrations/                    # Database tables
-│   └── seeders/
-│       └── DatabaseSeeder.php         # Sample data
-├── resources/
-│   └── views/
-│       ├── admin/                     # Admin panel views
-│       ├── auth/                      # Login/Register pages
-│       ├── layouts/                   # Main layout
-│       └── *.blade.php               # Other pages
-├── routes/
-│   └── web.php                        # All routes
-└── .env                               # Configuration
-```
 
 ## Database Tables
 
@@ -172,24 +136,6 @@ Customers can submit ratings (1-5 stars) with optional review text. Average rati
 - **Database**: MySQL
 - **Frontend**: Bootstrap 5, Font Awesome
 - **Server**: Laragon
-
-## Screenshots
-
-The application includes:
-- Beautiful home page with hero section
-- Menu grid with category filters
-- Reservation booking form
-- Customer ratings page
-- Admin dashboard with statistics
-- CRUD forms for all management features
-
-## Troubleshooting
-
-### Database Connection Error
-Make sure MySQL is running and database `cafe_management` exists.
-
-### Page Not Found
-Run `php artisan route:clear` and `php artisan cache:clear`.
 
 ### Permission Denied
 Check file permissions on storage and bootstrap/cache folders.
